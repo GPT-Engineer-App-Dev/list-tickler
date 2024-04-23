@@ -28,7 +28,7 @@ function TodoApp() {
       <List spacing={3} mt={4}>
         {tasks.map(task => (
           <ListItem key={task.id} d="flex" alignItems="center">
-            <ListIcon as={task.isComplete ? FaCheckCircle : FaTrash} color={task.isComplete ? 'green.500' : 'red.500'} cursor="pointer" onClick={() => toggleComplete(task.id)} />
+            <ListIcon as={FaCheckCircle} color={task.isComplete ? 'green.500' : 'gray.300'} cursor="pointer" onClick={() => toggleComplete(task.id)} />
             <Box flex="1" textDecoration={task.isComplete ? 'line-through' : 'none'}>
               {task.text}
             </Box>
